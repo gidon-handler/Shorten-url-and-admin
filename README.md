@@ -14,7 +14,7 @@ To run the php Yii2 admin and rest API:
 
 1. Clone this repo into a stack such as XAMP LAMP AMPPS or any web server which runs PHP.
 
-2. Run composer install.
+2. Run composer install. (requires php 7.1.* and up)
 
 3. Set up MySQL server and import the provided .sql file.
 
