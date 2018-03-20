@@ -20,7 +20,7 @@ To run the php Yii2 admin and rest API:
 
 4. In the config/db.php file change the 'dsn', 'username', and 'password' to your database credentials
 
-5. Point your browser to http://localhost/shorten-url-admin/web/admin. (in reall world we will point it to http://example.com/admin)
+5. Point your browser to http://localhost/shorten-url-admin/web/admin. (in the real world we will point it to http://example.com/admin)
 
 WHAT WE GET
 -----------

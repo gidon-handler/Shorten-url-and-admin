@@ -25,6 +25,10 @@ $config = [
                     'controller' => 'url'
                 ],
                 [
+                    'pattern' => 'url/shorten-url',
+                    'route' => 'url/shorten-url',
+                ],
+                [
                     'pattern' => 'admin',
                     'route' => 'admin',
                 ],
