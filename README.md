@@ -30,9 +30,9 @@ If all went well..
 
 2. This server is also an REST API server with the following endpoints (can use postman)
 
-  GET http://localhost/shorten-url-admin/web/urls.......list all urls data;
+  GET http://localhost/shorten-url-admin/web/urls.................... lists all urls data;
 
-  POST http://localhost/shorten-url-admin/web/urls......create a new url;
+  POST http://localhost/shorten-url-admin/web/urls................... creates a new url;
 
        data can be sent as raw JSON string
        {
@@ -43,12 +43,11 @@ If all went well..
        }
 
 
-  GET http://localhost/shorten-url-admin/web/urls/123...................return the details of the url 123;
+  GET http://localhost/shorten-url-admin/web/urls/123................... returns the details of the url 123;
 
-  PATCH http://localhost/shorten-url-admin/web/urls/123 and PUT.........update url 123;
+  PATCH http://localhost/shorten-url-admin/web/urls/123 and PUT......... updates url 123;
 
-  DELETE http://localhost/shorten-url-admin/web/urls/123: delete the url 123;
-
+  DELETE http://localhost/shorten-url-admin/web/urls/123................ deletes the url 123;
 
 
 
