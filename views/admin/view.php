@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Urls */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Urls', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Urls', 'url' => ['']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="urls-view">

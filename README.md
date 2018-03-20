@@ -22,7 +22,33 @@ To run the php Yii2 admin and rest API:
 
 5. Point your browser to http://localhost/shorten-url-admin/web/admin. (in reall world we will point it to http://example.com/admin)
 
-You should see a dashboard with all the CRUD options as well as sorting and filltering.
+WHAT WE GET
+-----------
+If all went well..
+
+1. You should see the Walla urls dashboard with all the CRUD operations as well as sorting and filtering.
+
+2. This server is also an REST API server with the following endpoints (can use postman)
+
+  GET http://localhost/shorten-url-admin/web/urls.......list all urls data;
+
+  POST http://localhost/shorten-url-admin/web/urls......create a new url;
+
+       data can be sent as raw JSON string
+       {
+           "original_url": "http://www.yiiframework.com/doc-2.0/yii-web-jsonparser.html",
+           "short_url": "qaqws",
+           "date_created": "12",
+           "counter": "2"
+       }
+
+
+  GET http://localhost/shorten-url-admin/web/urls/123...................return the details of the url 123;
+
+  PATCH http://localhost/shorten-url-admin/web/urls/123 and PUT.........update url 123;
+
+  DELETE http://localhost/shorten-url-admin/web/urls/123: delete the url 123;
+
 
 
 

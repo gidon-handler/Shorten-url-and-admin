@@ -7,8 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Urls */
 
 $this->title = 'Create Urls';
-$this->params['breadcrumbs'][] = ['label' => 'Urls', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="urls-create">
 

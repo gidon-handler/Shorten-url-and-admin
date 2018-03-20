@@ -29,7 +29,7 @@ class Urls extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['original_url', 'short_url', 'date_created'], 'required'],
+            [['original_url', 'short_url'], 'required'],
             [['date_created', 'counter'], 'integer'],
             [['original_url'], 'string', 'max' => 255],
             [['short_url'], 'string', 'max' => 6],

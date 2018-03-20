@@ -11,23 +11,47 @@ $config = [
     'defaultRoute' => 'admin',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
 
     'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => false,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                'class' => 'yii\rest\UrlRule',
-                'controller' => 'url',
-                'admin' => 'admin/index',
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'url'
+                ],
+                [
+                    'pattern' => 'admin',
+                    'route' => 'admin',
+                ],
+                [
+                    'pattern' => 'admin/create',
+                    'route' => 'admin/create',
+                ],
+                [
+                    'pattern' => 'admin/view/<id:\d+>',
+                    'route' => 'admin/view',
+                ],
+                [
+                    'pattern' => 'admin/delete/<id:\d+>',
+                    'route' => 'admin/delete',
+                ],
+                [
+                    'pattern' => 'admin/update/<id:\d+>',
+                    'route' => 'admin/update',
+                ],
             ],
         ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'LETNdCT3BWe1p2kROwmavk91Ttsl764l',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
