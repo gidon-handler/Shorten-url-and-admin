@@ -4,8 +4,10 @@
 namespace app\controllers;
 
 
+use app\models\Urls;
 use yii\filters\ContentNegotiator;
 use yii\filters\Cors;
+use yii\helpers\Url;
 use yii\rest\ActiveController;
 use yii\web\Response;
 
@@ -34,10 +36,9 @@ class UrlController extends ActiveController
 
    public function actionShortenUrl($long)
    {
-      /**todo 1.create short url from original
-       * todo 2. insert both into DB
-       */
-      return "This will be the short url of: $long";
+      $model = new Urls();
+      $code = $model->urlToShortCode($long);
+      return Url::base(true)."/re/$code";
    }
 
 }

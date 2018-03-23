@@ -8,7 +8,6 @@ $config = [
     'name' => 'Walla URL shortner',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'admin',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
@@ -27,6 +26,14 @@ $config = [
                 [
                     'pattern' => 'url/shorten-url',
                     'route' => 'url/shorten-url',
+                ],
+                [
+                    'pattern' => 're/<short_url:>',
+                    'route' => 're/index',
+                ],
+                [
+                    'pattern' => 'admin',
+                    'route' => 'admin/index',
                 ],
                 [
                     'pattern' => 'admin',
@@ -105,12 +112,12 @@ if (YII_ENV_DEV) {
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
+   // $config['bootstrap'][] = 'gii';
+  //  $config['modules']['gii'] = [
+  //      'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
+  //  ];
 }
 
 return $config;
