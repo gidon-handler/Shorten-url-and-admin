@@ -221,7 +221,8 @@ class Urls extends \yii\db\ActiveRecord
 //            "id" => $id
 //        );
 //        $stmt->execute($params);
-        Yii::$app->db->createCommand()->update('urls', ['counter' => 'counter + 1',], "id=$id")->execute();
+        $record = $this::findOne($id);
+        $record->updateCounters(['counter' => 1]);
     }
 }
 
